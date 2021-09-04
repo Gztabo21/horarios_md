@@ -6,6 +6,7 @@ import { Grid, GridItem } from "@chakra-ui/react"
 import  BreadcrumbDR  from './breadcrumb';
 import MenuDR from './menu';
 import HeaderDR from './header';
+import StaffDoctor from './staffDoctor'
 
 const ContentDR = () => {
     return (
@@ -27,7 +28,7 @@ const ContentDR = () => {
                 <GridItem colSpan={8} bg="#f3f6fa" > 
                     <HeaderDR />
                 </GridItem>
-                <GridItem colSpan={8} bg="papayawhip" />
+                <GridItem colSpan={8} > <StaffDoctor/> </GridItem>
                 <GridItem colSpan={8} bg="tomato" />
                 </Grid>
         </>
