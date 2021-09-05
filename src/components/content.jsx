@@ -1,35 +1,34 @@
 import React from "react";
-import { Container, Flex } from "@chakra-ui/react"
-import { Spacer} from '@chakra-ui/react';
-import { Grid, GridItem } from "@chakra-ui/react"
+import { Grid, GridItem,Flex } from "@chakra-ui/react"
 // components
 import  BreadcrumbDR  from './breadcrumb';
 import MenuDR from './menu';
 import HeaderDR from './header';
-import StaffDoctor from './staffDoctor'
+import StaffDoctor from './staffDoctor';
+import SheduleContainer from "./scheduleContainer";
 
 const ContentDR = () => {
     return (
         < >
             <Grid
-                w="100wv"
-                templateRows="repeat(8, 1fr)"
+                w="100vw"
+                templateRows="repeat(12, 1fr)"
                 templateColumns="repeat(12, 1fr)"
                 gap={4}
                 bg="#f3f6fa"
                 >
-                <GridItem rowSpan={8} colSpan={2}  bg="papayawhip" />
-                <GridItem colSpan={8} borderRadius="md" ><MenuDR /></GridItem>
-                <GridItem colSpan={8}  >
+                <GridItem rowSpan={12} colSpan={2}  bg="papayawhip" />
+                <GridItem colSpan={8}  ><MenuDR /></GridItem>
+                <GridItem colSpan={8} rowSpan={1}>
                     <Flex align="flex-start">
-                        <BreadcrumbDR />  <Spacer />
+                        <BreadcrumbDR />
                     </Flex>
                     </GridItem>
-                <GridItem colSpan={8} bg="#f3f6fa" > 
+                <GridItem colSpan={8} rowSpan={2} bg="#f3f6fa" > 
                     <HeaderDR />
                 </GridItem>
-                <GridItem colSpan={8} > <StaffDoctor/> </GridItem>
-                <GridItem colSpan={8} bg="tomato" />
+                <GridItem colSpan={8} rowSpan={3} ><StaffDoctor/> </GridItem>
+                <GridItem colSpan={8} rowSpan={4}><SheduleContainer /></GridItem>
                 </Grid>
         </>
     )
